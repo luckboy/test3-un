@@ -1,0 +1,11 @@
+uselib("pl.luckboy/test1-un")
+uselib("pl.luckboy/test2-un")
+
+module pl_luckboy_test3_un
+    usevar("pl_luckboy_test1_un::add")
+    usevar("pl_luckboy_test2_un::div")
+
+    function mul(x, y)
+        add(x, y) * div(x, y)
+    end
+end
