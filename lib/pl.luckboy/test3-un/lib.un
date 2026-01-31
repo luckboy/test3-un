@@ -1,11 +1,17 @@
 uselib("pl.luckboy/test1-un")
 uselib("pl.luckboy/test2-un")
+uselib("pl.luckboy/test4-un")
 
 module pl_luckboy_test3_un
     usevar("pl_luckboy_test1_un::add")
     usevar("pl_luckboy_test2_un::div")
+    usevar("pl_luckboy_test4_un::sub")
 
     function mul(x, y)
         add(x, y) * div(x, y)
+    end
+
+    function mul2(x, y)
+        add(x, y) * sub(x, y)
     end
 end
